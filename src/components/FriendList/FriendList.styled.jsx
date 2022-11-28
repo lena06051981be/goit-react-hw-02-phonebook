@@ -4,10 +4,8 @@ export const Friends = styled.ul`
   display: flex;
   flex-direction: column;
   width: 320px;
-  gap: 20px;
+  gap: 10px;
   padding: 8px;
-  /* background-color: #6d9886; */
-  /* border: 2px solid #393e46; */
   border-radius: 4px;
 `;
 
@@ -15,17 +13,17 @@ export const FriendsItem = styled.li`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 85px;
+  height: 75px;
   width: 320px;
-  padding: 4px;
-  /* background-color: #f2e7d5; */
+  padding: 8px;
   border: 1px solid rgb(112, 109, 109);
   border-radius: 18px;
   cursor: pointer;
-  /* box-shadow: 0px 0px 2px 4px rgba(129, 129, 129, 0.4); */
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
   transition: box-shadow 150ms ;
   :hover {
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(49, 49, 49);
   }
 `;
 
