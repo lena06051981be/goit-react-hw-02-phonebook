@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 // import {username, tag, location, avatar, stats} from '../../data/user.json'
 
 export const Profile = ({username, tag, location, avatar, followers, views, likes }) => {
@@ -32,4 +32,15 @@ export const Profile = ({username, tag, location, avatar, followers, views, like
             </ul>
         </div>
     )   
+}
+
+Profile.propTypes = {    
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.object.isRequired,
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
 }
