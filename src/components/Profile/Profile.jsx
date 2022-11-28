@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
+import { ProfileContainer, } from './Profile.styled'
+
 // import {username, tag, location, avatar, stats} from '../../data/user.json'
 
 export const Profile = ({username, tag, location, avatar, followers, views, likes }) => {
     return (
-        <div>
+        <ProfileContainer>
             <div>
                 <img
                     src={avatar}
@@ -30,7 +32,7 @@ export const Profile = ({username, tag, location, avatar, followers, views, like
                     <span className="quantity">{likes}</span>
                 </li>
             </ul>
-        </div>
+        </ProfileContainer>
     )   
 }
 
