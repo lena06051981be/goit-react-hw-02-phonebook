@@ -1,18 +1,24 @@
 import PropTypes from "prop-types";
+import {
+    SectionStatistics,
+    StatisticTitle,
+    StatistiList,
+    StatistiItem,
+} from './Statistics.stlyled'
 
 export const Statistics = ({ title, stats }) => {
     return (
-        <section>
-            <h2>{title}</h2>
-            <ul>
+        <SectionStatistics>
+            <StatisticTitle>{title}</StatisticTitle>
+            <StatistiList>
                 {stats.map(stat => (
-                    <li key={stat.id}>
-                        <span>{stat.label}</span>,
+                    <StatistiItem key={stat.id}>
+                        <span>{stat.label}</span>
                         <span>{stat.percentage}%</span>
-                    </li>
+                    </StatistiItem>
                 ) )}        
-            </ul>
-        </section>
+            </StatistiList>
+        </SectionStatistics>
     )
 }
 
