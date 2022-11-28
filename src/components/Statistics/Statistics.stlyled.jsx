@@ -2,10 +2,11 @@ import styled from '@emotion/styled';
 
 export const SectionStatistics = styled.section`
   padding: 20px 0px;
+  width: 578px;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
+  border-radius: 4px;  
 `;
 
 export const StatisticTitle = styled.h2`
@@ -23,8 +24,8 @@ export const StatisticList = styled.ul`
   display: flex;
   margin: 0;
   padding: 0;
-
   gap: 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 `;
 
 export const StatisticItem = styled.li`
