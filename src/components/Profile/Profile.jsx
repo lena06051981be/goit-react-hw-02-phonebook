@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 // import {username, tag, location, avatar, stats} from '../../data/user.json'
 
-export const Profile = ({username, tag, location, avatar, followers }) => {
+export const Profile = ({username, tag, location, avatar, followers, views, likes }) => {
     return (
         <div>
             <div>
@@ -22,11 +22,11 @@ export const Profile = ({username, tag, location, avatar, followers }) => {
                 </li>
                 <li>
                     <span className="label">Views</span>
-                    <span className="quantity"></span>
+                    <span className="quantity">{views}</span>
                 </li>
                 <li>
                     <span className="label">Likes</span>
-                    <span className="quantity"></span>
+                    <span className="quantity">{likes}</span>
                 </li>
             </ul>
         </div>
