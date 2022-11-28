@@ -15,6 +15,7 @@ export const Description = styled.div`
   align-items: center;
   text-align: center;
   padding: 2rem;
+  padding-bottom: 10px;
  `
 
 export const AvatarImg = styled.img`

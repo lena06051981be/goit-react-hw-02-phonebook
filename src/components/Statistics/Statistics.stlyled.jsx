@@ -38,13 +38,17 @@ export const StatisticItem = styled.li`
   
   text-shadow: 0 0 1px #d3d3d3;
   box-shadow: 0 0 2px rgb(91, 89, 89);
+  transition: text-shadow 150ms ;
+  :hover {
+    text-shadow: 0px 2.5px 0px #5c5c5c;
+  }
 `;
 
 export const StatisticLabel = styled.span`
   margin-bottom: 15px;
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 700;  
 `;
 
 export const StatisticPercentage = styled.span`
