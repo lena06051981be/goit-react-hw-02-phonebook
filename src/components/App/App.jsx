@@ -9,9 +9,11 @@ import data from '../../data/data.json';
 import friend from '../../data/friends.json';
 import transactions from '../../data/transactions.json';
 
+import { Container, } from './App.styled'
+
 export const App = () => {
   return (
-    <>
+    <Container>
       <Profile 
       username ={user.username}
       tag = {user.tag}
@@ -24,7 +26,7 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <FreindList friends={friend} />
       <TransactionHistory transaction={transactions} />
-    </>
+    </Container>
   );
 };
 
