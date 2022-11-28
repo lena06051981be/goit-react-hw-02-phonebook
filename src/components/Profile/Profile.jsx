@@ -1,5 +1,14 @@
 import PropTypes from 'prop-types';
-import { ProfileContainer, Description } from './Profile.styled'
+import { 
+    ProfileContainer, 
+    Description, 
+    AvatarImg, 
+    Username, 
+    UserNickname,
+    UserLocation,
+    Stats,
+    StatsLi,
+ } from './Profile.styled'
 
 // import {username, tag, location, avatar, stats} from '../../data/user.json'
 
@@ -7,31 +16,30 @@ export const Profile = ({username, tag, location, avatar, followers, views, like
     return (
         <ProfileContainer>
             <Description>
-                <img
+                <AvatarImg
                     src={avatar}
                     alt={username}
-                    width={320}
-                className="avatar"
+                    // width={320}                
                 />
-                <p>{username}</p>
-                <p>@{tag}</p>
-                <p>{location}</p>
+                <Username>{username}</Username>
+                <UserNickname>@{tag}</UserNickname>
+                <UserLocation>{location}</UserLocation>
             </Description>
 
-            <ul className="stats">
-                <li>
+            <Stats>
+                <StatsLi>
                     <span className="label">Followers</span>
                     <span className="quantity">{followers}</span>
-                </li>
-                <li>
+                </StatsLi>
+                <StatsLi>
                     <span className="label">Views</span>
                     <span className="quantity">{views}</span>
-                </li>
-                <li>
+                </StatsLi>
+                <StatsLi>
                     <span className="label">Likes</span>
                     <span className="quantity">{likes}</span>
-                </li>
-            </ul>
+                </StatsLi>
+            </Stats>
         </ProfileContainer>
     )   
 }
