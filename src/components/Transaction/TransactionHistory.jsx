@@ -1,4 +1,4 @@
-export const TransactionHistory =({}) => {
+export const TransactionHistory =({transaction}) => {
     return (
         <div>
             <thead>
@@ -8,7 +8,16 @@ export const TransactionHistory =({}) => {
                     <th>Currency</th>
                 </tr>
             </thead>
-            
+            <tbody>
+                {transaction.map(item => (
+                    <tr>
+                        <td>{item.type}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>                    
+                ))}
+
+            </tbody>
             
 
         </div>
