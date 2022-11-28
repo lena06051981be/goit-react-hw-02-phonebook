@@ -1,6 +1,6 @@
 export const TransactionHistory =({transaction}) => {
     return (
-        <div>
+        <table className="transaction-history">
             <thead>
                 <tr>
                     <th>Type</th>
@@ -17,8 +17,6 @@ export const TransactionHistory =({transaction}) => {
                     </tr>                    
                 ))}
             </tbody>  
-        </div>
-
-
+        </table>
     )
 }

@@ -8,7 +8,6 @@ export const FreindList = ({friends}) => {
                     <p className="name">{friend.name}</p>
                 </li>
             ))}
-
         </div>
     )
 }
