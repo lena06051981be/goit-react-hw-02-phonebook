@@ -8,6 +8,8 @@ import {
     UserLocation,
     Stats,
     StatsLi,
+    StatsLabel,
+    StatsQuantity
  } from './Profile.styled'
 
 // import {username, tag, location, avatar, stats} from '../../data/user.json'
@@ -28,16 +30,16 @@ export const Profile = ({username, tag, location, avatar, followers, views, like
 
             <Stats>
                 <StatsLi>
-                    <span className="label">Followers</span>
-                    <span className="quantity">{followers}</span>
+                    <StatsLabel>Followers</StatsLabel>
+                    <StatsQuantity>{followers}</StatsQuantity>
                 </StatsLi>
                 <StatsLi>
-                    <span className="label">Views</span>
-                    <span className="quantity">{views}</span>
+                    <StatsLabel>Views</StatsLabel>
+                    <StatsQuantity>{views}</StatsQuantity>
                 </StatsLi>
                 <StatsLi>
-                    <span className="label">Likes</span>
-                    <span className="quantity">{likes}</span>
+                    <StatsLabel>Likes</StatsLabel>
+                    <StatsQuantity>{likes}</StatsQuantity>
                 </StatsLi>
             </Stats>
         </ProfileContainer>

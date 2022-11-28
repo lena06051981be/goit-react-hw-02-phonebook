@@ -61,7 +61,22 @@ export const StatsLi = styled.li`
   font-size: 20px;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #d3d5e3;
-  background-color: rgba(241, 241, 241, 0.833);
-  
+  border-top: 1px solid #d3d5e3; 
+  border-right: 1px solid #d3d5e3;  
+  background-color: rgba(241, 241, 241, 0.833);  
 `
+export const StatsLabel = styled.span`
+  margin-bottom: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #393e46;
+`;
+
+export const StatsQuantity = styled.span`
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5f6773;
+`;
+
