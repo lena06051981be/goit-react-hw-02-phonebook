@@ -8,8 +8,7 @@ export const Statistics = ({title, stats}) => {
                         <span>{stat.label}</span>,
                         <span>{stat.percentage}%</span>
                     </li>
-                ) )}                
-                
+                ) )}        
             </ul>
         </section>
     )
