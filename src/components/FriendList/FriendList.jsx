@@ -1,4 +1,6 @@
-export const FreindList = ({friends}) => {
+import PropTypes from "prop-types";
+
+export const FreindList = ({ friends }) => {
     return (
         <div>
             {friends.map(friend =>(
@@ -11,3 +13,14 @@ export const FreindList = ({friends}) => {
         </div>
     )
 }
+
+FreindList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ),
+};

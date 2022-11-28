@@ -1,12 +1,13 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { Profile } from "../Profile/Profile";
-import user from '../../data/user.json'
 import { Statistics } from "components/Statistics/Statistics";
-import data from '../../data/data.json'
 import { FreindList } from "components/FriendList/FriendList";
-import friend from '../../data/friends.json'
 import { TransactionHistory } from "components/Transaction/TransactionHistory";
-import transactions from '../../data/transactions.json'
+
+import user from '../../data/user.json';
+import data from '../../data/data.json';
+import friend from '../../data/friends.json';
+import transactions from '../../data/transactions.json';
 
 export const App = () => {
   return (
@@ -27,7 +28,9 @@ export const App = () => {
   );
 };
 
-
+App.propTypes = {
+  children: PropTypes.node,
+};
 
 // Product.propTypes = {
 //   imgUrl: PropTypes.string,
