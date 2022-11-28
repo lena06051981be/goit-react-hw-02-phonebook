@@ -11,7 +11,6 @@ export const TransactionsTable = styled.table`
 
   border-collapse: separate;
   border-spacing: 0px;
-  border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 `;
 
@@ -19,9 +18,7 @@ export const TableHead = styled.thead`
   color: #ffffff;
   background-color: rgb(3, 210, 210);
   text-transform: uppercase;
-  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  /* border-top-left-radius: 4px;
-  border-top-right-radius: 24px; */
+  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
 `;
 
 export const TableTitle = styled.th`
@@ -31,7 +28,7 @@ export const TableTitle = styled.th`
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   color: #ffffff;
 `;
 export const TableItem = styled.td`
@@ -41,10 +38,10 @@ export const TableItem = styled.td`
   font-weight: 500;
   text-align: center;
   text-transform: capitalize;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;  
 `;
 export const TableRow = styled.tr`
-  /* color: grey; */
+  color: #464646;  
   text-align: center;
   text-transform: capitalize;
   :nth-of-type(even) {
