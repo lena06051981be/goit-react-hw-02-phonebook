@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import { ProfileContainer, } from './Profile.styled'
+import { ProfileContainer, Description } from './Profile.styled'
 
 // import {username, tag, location, avatar, stats} from '../../data/user.json'
 
 export const Profile = ({username, tag, location, avatar, followers, views, likes }) => {
     return (
         <ProfileContainer>
-            <div>
+            <Description>
                 <img
                     src={avatar}
                     alt={username}
@@ -16,7 +16,7 @@ export const Profile = ({username, tag, location, avatar, followers, views, like
                 <p>{username}</p>
                 <p>@{tag}</p>
                 <p>{location}</p>
-            </div>
+            </Description>
 
             <ul className="stats">
                 <li>
@@ -41,7 +41,7 @@ Profile.propTypes = {
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    stats: PropTypes.object.isRequired,
+    stats: PropTypes.object,
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,

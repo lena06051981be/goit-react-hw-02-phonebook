@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-    display: 'flex',
-    /* flexDirection: 'column', */
-    /* justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: 40, */
-    /* color: '#010101', */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px; */
+    font-Size: 40;
+    color: #010101;
 `
