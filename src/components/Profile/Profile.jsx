@@ -3,6 +3,7 @@
 
 export const Profile = ({username, tag, location, avatar, stats }) => {
     return (
+        <div>
             <div>
                 <img
                 src={avatar}
@@ -12,7 +13,22 @@ export const Profile = ({username, tag, location, avatar, stats }) => {
                 <p>{username}</p>
                 <p>{tag}</p>
                 <p>{location}</p>
-                <p>Test</p>
-            </div>       
+            </div>
+
+            <ul className="stats">
+                <li>
+                    <span className="label"></span>
+                    <span className="quantity"></span>
+                </li>
+                <li>
+                    <span className="label"></span>
+                    <span className="quantity"></span>
+                </li>
+                <li>
+                    <span className="label"></span>
+                    <span className="quantity"></span>
+                </li>
+            </ul>
+        </div>
     )   
 }
