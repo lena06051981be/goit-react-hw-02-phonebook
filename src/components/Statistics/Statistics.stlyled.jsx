@@ -18,7 +18,7 @@ export const StatisticTitle = styled.h2`
   font-size: 34px;
 `;
 
-export const StatistiList = styled.ul`
+export const StatisticList = styled.ul`
   width: 100%;
   display: flex;
   margin: 0;
@@ -27,13 +27,27 @@ export const StatistiList = styled.ul`
   gap: 0px;
 `;
 
-export const StatistiItem = styled.li`
+export const StatisticItem = styled.li`
   width: calc(100% / 5);
   padding: 15px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* text-shadow: 0 0 4px #000; */
+  
+  text-shadow: 0 0 1px #d3d3d3;
   box-shadow: 0 0 2px rgb(91, 89, 89);
+`;
+
+export const StatisticLabel = styled.span`
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+`;
+
+export const StatisticPercentage = styled.span`
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
 `;
