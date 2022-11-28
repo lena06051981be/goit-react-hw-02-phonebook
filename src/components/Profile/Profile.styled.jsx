@@ -20,7 +20,7 @@ export const Description = styled.div`
 
 export const AvatarImg = styled.img`
   display: flex;
-  max-width: 50%;
+  max-width: 60%;
   border-radius: 50%;
   border: 1px dashed grey;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
