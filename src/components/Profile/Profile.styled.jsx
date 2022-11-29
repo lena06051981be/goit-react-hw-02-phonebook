@@ -67,6 +67,9 @@ export const StatsLi = styled.li`
   background-color: rgba(241, 241, 241, 0.833);  
 `
 export const StatsLabel = styled.span`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 6px;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;

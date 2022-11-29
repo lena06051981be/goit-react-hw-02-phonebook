@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import {GrView, GrLike} from 'react-icons/gr';
+import {GiShadowFollower} from 'react-icons/gi';
 import { 
     ProfileContainer, 
     Description, 
@@ -30,15 +32,15 @@ export const Profile = ({username, tag, location, avatar, followers, views, like
 
             <Stats>
                 <StatsLi>
-                    <StatsLabel>Followers</StatsLabel>
+                    <StatsLabel><GiShadowFollower className='followers'/>Followers</StatsLabel>
                     <StatsQuantity>{followers}</StatsQuantity>
                 </StatsLi>
                 <StatsLi>
-                    <StatsLabel>Views</StatsLabel>
+                    <StatsLabel><GrView className='view' /> Views</StatsLabel>
                     <StatsQuantity>{views}</StatsQuantity>
                 </StatsLi>
                 <StatsLi>
-                    <StatsLabel>Likes</StatsLabel>
+                    <StatsLabel><GrLike className='like'/>Likes</StatsLabel>
                     <StatsQuantity>{likes}</StatsQuantity>
                 </StatsLi>
             </Stats>

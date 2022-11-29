@@ -43,3 +43,13 @@ img {
 li {
   list-style: none;
 }
+
+.followers * {
+  fill: rgb(0, 140, 255);
+}
+.view * {
+  fill: rgb(0, 255, 0);
+}
+.like * {
+  fill: red;
+}
