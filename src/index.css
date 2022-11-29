@@ -45,11 +45,11 @@ li {
 }
 
 .followers * {
-  fill: rgb(0, 140, 255);
+  fill: rgb(0, 204, 255);
 }
 .view * {
   fill: rgb(0, 255, 0);
 }
 .like * {
-  fill: red;
+  fill: rgb(255, 56, 56);
 }
