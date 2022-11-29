@@ -38,9 +38,9 @@ export const StatisticItem = styled.li`
   
   text-shadow: 0 0 1px #d3d3d3;
   box-shadow: 0 0 2px rgb(91, 89, 89);
-  transition: text-shadow 150ms, color 150ms ;
+  transition: text-shadow 150ms, color 250ms ;
   :hover {
-    color: #fff;
+    color: blue;
     /* text-shadow: 0px 2.5px 0px #5c5c5c;S */
   }
 `;
