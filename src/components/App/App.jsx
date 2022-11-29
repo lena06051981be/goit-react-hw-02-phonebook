@@ -30,34 +30,8 @@ export const App = () => {
   );
 };
 
-App.propTypes = {
-  children: PropTypes.node,
-};
 
-// Product.propTypes = {
-//   imgUrl: PropTypes.string,
-//   name: PropTypes.string.isRequired,
-//   price: PropTypes.number.isRequired,
+
+// App.propTypes = {
+//   children: PropTypes.node,
 // };
-
-// const Profile = ({ name, email }) => (
-//   <div>
-//     <p>Name: {name}</p>
-//     <p>Email: {email}</p>
-//   </div>
-// );
-
-// const Panel = ({ title, children }) => (
-//   <section>
-//     <h2>{title}</h2>
-//     {children}
-//   </section>
-// );
-
-// export const App = () => (
-//   <div>
-//     <Panel title="User profile">
-//       <Profile name="Mango" email="mango@mail.com" />
-//     </Panel>
-//   </div>
-// );
