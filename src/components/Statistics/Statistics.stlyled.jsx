@@ -35,13 +35,16 @@ export const StatisticItem = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scale: 1.0;
   
   text-shadow: 0 0 1px #d3d3d3;
   box-shadow: 0 0 2px rgb(91, 89, 89);
-  transition: text-shadow 150ms, color 250ms ;
+  transition: text-shadow 150ms, color 250ms, tscale 850ms linear;
   :hover {
-    /* color: blue; */
+    /* color: #ffffff; */
+    /* text-transform: uppercase; */
     text-shadow: 0px 1.5px 0px #5c5c5c;
+    scale: 1.02;
   }
 `;
 
@@ -49,11 +52,17 @@ export const StatisticLabel = styled.span`
   margin-bottom: 15px;
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
-  font-weight: 700;  
+  font-weight: 700; 
+   /* :hover {
+    scale: 1.2;
+  } */
 `;
 
 export const StatisticPercentage = styled.span`
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
   font-weight: bold;
+   /* :hover {
+    scale: 1.2;
+  } */
 `;
