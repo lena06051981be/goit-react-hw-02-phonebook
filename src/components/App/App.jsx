@@ -1,4 +1,4 @@
-import Phonebook from 'components/Phonebook/Phonebook';
+import PhonebookForm from 'components/PhonebookForm/PhonebookForm';
 import React, { Component } from 'react'
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Phonebook />
+        <PhonebookForm />
       </>
   )
 }
