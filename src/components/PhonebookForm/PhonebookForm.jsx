@@ -35,7 +35,7 @@ class Phonebook extends Component {
     render() {
         return (
         <form onSubmit={this.handleFormSubmit} style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '320px' }}>
-            <h2>Phonebook Test</h2>
+            <h1>Phonebook</h1>
                 <label htmlFor={this.nameInputId} >
                     Name {''}
                 </label>                

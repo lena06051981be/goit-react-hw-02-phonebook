@@ -3,12 +3,38 @@ import React, { Component } from 'react'
 
 class App extends Component {
   state = {
-  contacts: [],
-  name: ''
+    contacts: [
+      {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
+      {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
+      {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
+      {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
+    ],
+    filter: '',
   }
 
-  formSubmitHandler = data => {
-    console.log(data);
+  formSubmitHandler = event => {
+    // const newContact = {
+    //   id: id,
+    //   name: name,
+    //   number: number,
+    // };
+
+    const id = event.id;
+    const name = event.name;
+    const number = event.number;
+    const contactsLists = [...this.state.contacts];
+    console.log(event);
+
+    if (
+      contactsLists.find(
+        contact => name.toLowerCase() === contact.name.toLowerCase()
+      )
+    ) {
+      alert(`${name} is already in contacts.`);
+    } else {
+      contactsLists.push({ name, id, number });
+      console.log(contactsLists);
+    }
   }
 
   render() {
