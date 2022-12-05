@@ -13,7 +13,7 @@ class Phonebook extends Component {
 
     render() {
         return (
-        <div style={{ display: 'flex', flexDirection: 'column', width: '320px' }}>
+        <form style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '320px' }}>
             <h2>Phonebook Test</h2>
             <label htmlFor="name">Name</label>
             <input
@@ -39,7 +39,7 @@ class Phonebook extends Component {
             />
             
             <button type="submit">Add contact</button>
-        </div>
+        </form>
     )
     }
 } 
