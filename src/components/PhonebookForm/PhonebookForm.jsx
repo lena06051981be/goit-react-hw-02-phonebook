@@ -34,7 +34,7 @@ class Phonebook extends Component {
             <h2>Phonebook Test</h2>
                 {/* <label htmlFor="name"> */}
                 <label >
-                    Name
+                    Name {''}
                     <input
                         type="text"
                         name="name"
@@ -49,7 +49,7 @@ class Phonebook extends Component {
             
                 {/* <label htmlFor="name"> */}
                 <label >
-                    Number
+                    Number {''}
                     <input                
                         type="tel"
                         name="number"
