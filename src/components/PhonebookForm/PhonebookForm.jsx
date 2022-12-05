@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { nanoid } from 'nanoid';
 
 class Phonebook extends Component {
     state = {
+        id: nanoid(),
         name: '',
         number: '',
     }
@@ -27,40 +29,44 @@ class Phonebook extends Component {
         this.setState({name: '', number: ''})
     }
     
+    nameInputId = nanoid();
+    numberInputId = nanoid();
 
     render() {
         return (
         <form onSubmit={this.handleFormSubmit} style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '320px' }}>
             <h2>Phonebook Test</h2>
-                {/* <label htmlFor="name"> */}
-                <label >
+                <label htmlFor={this.nameInputId} >
                     Name {''}
-                    <input
-                        type="text"
-                        name="name"
-                        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-                        placeholder="Emmy Richards"
-                        required
-                        value={this.state.name}
-                        onChange={this.handleInputChange}
-                    />
-                </label>
+                </label>                
+                <input
+                    type="text"
+                    name="name"
+                    id={this.nameInputId}
+                    pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                    title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+                    placeholder="Emmy Richards"
+                    required
+                    value={this.state.name}
+                    onChange={this.handleInputChange}
+                />       
             
                 {/* <label htmlFor="name"> */}
-                <label >
+                <label htmlFor={this.numberInputId}>
                     Number {''}
-                    <input                
-                        type="tel"
-                        name="number"
-                        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-                        placeholder="000-000-00"
-                        required
-                        value={this.state.number}
-                        onChange={this.handleInputChange}
-                    />
-                </label>        
+                </label>                
+                <input                
+                    type="tel"
+                    name="number"
+                    id={this.numberInputId}
+                    pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                    title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+                    placeholder="000-000-00"
+                    required
+                    value={this.state.number}
+                    onChange={this.handleInputChange}
+                />
+                        
             <button type="submit">Add contact</button>
         </form>
     )}
