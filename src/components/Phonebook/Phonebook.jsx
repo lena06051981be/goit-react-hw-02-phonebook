@@ -7,13 +7,12 @@ class Phonebook extends Component {
     }
 
     handleInputChange = event => {
+        // console.log(event.currentTarget);
         // console.log(event.currentTarget.value);
-        this.setState({name: event.currentTarget.value})
+        // console.log(event.currentTarget.name);
+        this.setState({[event.currentTarget.name]: event.currentTarget.value})
     }
-    handleInputNumber = event => {
-        // console.log(event.currentTarget.value);
-        this.setState({number: event.currentTarget.value})
-    }
+    
 
     render() {
         return (
@@ -45,7 +44,7 @@ class Phonebook extends Component {
                         placeholder="000-000-00"
                         required
                         value={this.state.number}
-                        onChange={this.handleInputNumber}
+                        onChange={this.handleInputChange}
                     />
                 </label>        
             <button type="submit">Add contact</button>
