@@ -10,7 +10,9 @@ class Phonebook extends Component {
         // console.log(event.currentTarget);
         // console.log(event.currentTarget.value);
         // console.log(event.currentTarget.name);
-        this.setState({[event.currentTarget.name]: event.currentTarget.value})
+        // this.setState({ [event.currentTarget.name]: event.currentTarget.value });
+        const { name, value } = event.currentTarget;
+        this.setState({ [name]: value })
     }
     
 
