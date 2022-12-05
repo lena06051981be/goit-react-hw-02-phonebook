@@ -14,11 +14,23 @@ class Phonebook extends Component {
         const { name, value } = event.currentTarget;
         this.setState({ [name]: value })
     }
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        // console.log(this.state)
+
+        this.props.onSubmit(this.state)
+        this.resetForm()
+    }
+
+    resetForm = () => {
+        this.setState({name: '', number: ''})
+    }
     
 
     render() {
         return (
-        <form style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '320px' }}>
+        <form onSubmit={this.handleFormSubmit} style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '320px' }}>
             <h2>Phonebook Test</h2>
                 {/* <label htmlFor="name"> */}
                 <label >
@@ -51,10 +63,7 @@ class Phonebook extends Component {
                 </label>        
             <button type="submit">Add contact</button>
         </form>
-    )
-    }
-} 
-   
-
+    )}
+}
 
 export default Phonebook;
