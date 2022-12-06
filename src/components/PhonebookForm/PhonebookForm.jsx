@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
 class Phonebook extends Component {
@@ -73,3 +74,7 @@ class Phonebook extends Component {
 }
 
 export default Phonebook;
+
+Phonebook.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

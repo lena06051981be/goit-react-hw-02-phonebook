@@ -1,9 +1,11 @@
-import React from "react";
+import PropTypes from 'prop-types';
 
 const Filter = ({value, onFilter}) => {
     return (
         <label>
             <input
+                type="text"
+                name="filter"
                 value={value}
                 onChange={onFilter}
                 placeholder="Enter request"
@@ -13,3 +15,8 @@ const Filter = ({value, onFilter}) => {
  }
 
 export default Filter;
+
+Filter.propTypes = {
+    value: PropTypes.string.isRequired,
+    onFilter: PropTypes.func.isRequired,
+}

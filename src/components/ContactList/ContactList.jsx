@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 // import {
 //   ContactItem,
 //   ContactListStyled,
@@ -19,3 +19,13 @@ export const Contacts = ({ contactsFiltred, handleDelete }) => (
     </ul>
   </div>
 );
+
+Contacts.propTypes = {
+  contactsFiltred: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })).isRequired,
+  handleDelete: PropTypes.func.isRequired,
+}
