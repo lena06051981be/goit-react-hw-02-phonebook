@@ -51,29 +51,37 @@ class App extends Component {
     }));
   };
 
-  getFilteredContacts = () => {
-    const normalizedFilter = this.state.filter.toLowerCase();
-    const filterContactsList = this.state.contacts.filter(contact => {
-      return contact.name.toLowerCase().includes(normalizedFilter);
-    });
-
-    return filterContactsList;
-  };
-
   changeFilter = event => {
     this.setState({ filter: event.currentTarget.value });
-  };
+  };  
 
+  // getFilteredContacts = () => {
+  //   const normalizedFilter = this.state.filter.toLowerCase();
+  //   const filterContactsList = this.state.contacts.filter(contact => {
+  //     return contact.name.toLowerCase().includes(normalizedFilter);
+  //   });
+  //   return filterContactsList;
+  // };
+  
+  getVisibleContacts = () => {
+    const normalizedFilter = this.state.filter.toLowerCase();   
 
+    return this.state.contacts.filter(contact =>
+      contact.name.toLowerCase().includes(normalizedFilter),
+    );
+  }
 
   render() {
     console.log(this.state.contacts);
+    
     return (
       <>
         <PhonebookForm onSubmit={this.formSubmitHandler} />
-        <Filter onChange={this.changeFilter} />
+        <Filter
+          value={this.state.filter}
+          onFilter={this.changeFilter} />
         <Contacts
-          contacts={this.getFilteredContacts()}
+          contactsFiltred={this.getVisibleContacts()}
           handleDelete={this.handleDelete}
         ></Contacts>
       </>

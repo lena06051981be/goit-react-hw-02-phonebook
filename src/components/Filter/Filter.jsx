@@ -1,10 +1,11 @@
 import React from "react";
 
-const Filter = ({onChange}) => {
+const Filter = ({value, onFilter}) => {
     return (
         <label>
             <input
-                onChange={onChange}
+                value={value}
+                onChange={onFilter}
                 placeholder="Enter request"
             ></input>
         </label>        
