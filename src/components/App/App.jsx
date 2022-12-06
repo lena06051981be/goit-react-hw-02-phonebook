@@ -14,32 +14,36 @@ class App extends Component {
   }
 
   formSubmitHandler = event => {
-    // const newContact = {
-    //   id: id,
-    //   name: name,
-    //   number: number,
-    // };
-
-    const id = event.id;
-    const name = event.name;
-    const number = event.number;
+    const newContact = {
+      id: event.id,
+      name: event.name,
+      number: event.number,
+    };
+    // const id = event.id;
+    // const name = event.name;
+    // const number = event.number;
     const contactsLists = [...this.state.contacts];
     console.log(event);
 
     if (
       contactsLists.find(
-        contact => name.toLowerCase() === contact.name.toLowerCase()
-      )
-    ) {
-      alert(`${name} is already in contacts.`);
-    } else {
-      contactsLists.push({ name, id, number });
-      console.log(contactsLists);
-    }
+        contacts => newContact.name.toLowerCase() === contacts.name.toLowerCase()
+      )) {
+      alert(`${newContact.name} is already in contacts.`);
+      return;
+    }    
+   
+    this.setState(({ contacts }) => ({
+      contacts: [newContact, ...contacts],
+    }));    
 
-    this.setState({contacts: contactsLists})
+    // this.setState({contacts: [newContact, contactsLists]})
+    // contactsLists.push({ name, id, number });   
+
+    // this.setState({contacts: contactsLists})
   }
 
+  
   handleDelete = selectedId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== selectedId),
@@ -56,6 +60,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.contacts);
     return (
       <>
         <PhonebookForm onSubmit={this.formSubmitHandler} />
