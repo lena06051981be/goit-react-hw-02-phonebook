@@ -40,9 +40,9 @@ class App extends Component {
     this.setState({contacts: contactsLists})
   }
 
-  handleDelete = e => {
+  handleDelete = selectedId => {
     this.setState(prevState => ({
-      contacts: prevState.contacts.filter(contact => contact.id !== e),
+      contacts: prevState.contacts.filter(contact => contact.id !== selectedId),
     }));
   };
 
