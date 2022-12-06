@@ -36,6 +36,8 @@ class App extends Component {
       contactsLists.push({ name, id, number });
       console.log(contactsLists);
     }
+
+    this.setState({contacts: contactsLists})
   }
 
   handleDelete = e => {
