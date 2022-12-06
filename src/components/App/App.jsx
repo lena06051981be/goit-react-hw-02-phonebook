@@ -1,4 +1,5 @@
 import { Contacts } from 'components/ContactList/ContactList';
+import Filter from 'components/Filter/Filter';
 import PhonebookForm from 'components/PhonebookForm/PhonebookForm';
 import React, { Component } from 'react'
 
@@ -50,7 +51,7 @@ class App extends Component {
     }));
   };
 
-    getFilteredContacts = () => {
+  getFilteredContacts = () => {
     const normalizedFilter = this.state.filter.toLowerCase();
     const filterContactsList = this.state.contacts.filter(contact => {
       return contact.name.toLowerCase().includes(normalizedFilter);
@@ -59,11 +60,18 @@ class App extends Component {
     return filterContactsList;
   };
 
+  changeFilter = event => {
+    this.setState({ filter: event.currentTarget.value });
+  };
+
+
+
   render() {
     console.log(this.state.contacts);
     return (
       <>
         <PhonebookForm onSubmit={this.formSubmitHandler} />
+        <Filter onChange={this.changeFilter} />
         <Contacts
           contacts={this.getFilteredContacts()}
           handleDelete={this.handleDelete}
