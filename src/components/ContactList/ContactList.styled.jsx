@@ -25,7 +25,6 @@ export const ContactList = styled.ul`
     color: darkblue;
     font-weight: 600;
     /* text-shadow: 2px 2px 2px rgba(28, 2, 141, 0.2); */
-    /* color: rgb(78, 41, 20); */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -40,8 +39,8 @@ export const ContactBtn = styled.button`
     margin-left: 30px;
     width: 100px;
     padding: 5px 10px;
-    background-color: rgb(28, 80, 165);
-    /* background-color: rgb(20, 89, 116); */
+    /* background-color: rgb(28, 80, 165); */
+    background-color: rgb(20, 89, 116);
     color: white;
     border: none;
     border-radius: 15px;

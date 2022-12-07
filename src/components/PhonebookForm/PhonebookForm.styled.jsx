@@ -39,6 +39,7 @@ export const FormBtn = styled.button`
     padding: 10px 15px;
     margin-top: 20px;
     background-color: rgb(20, 89, 116);
+    /* background-color: rgb(28, 80, 165); */
     color: white;
     border: none;
     border-radius: 15px;
