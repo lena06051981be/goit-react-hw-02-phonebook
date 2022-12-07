@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const FormTitle = styled.h1`
-    margin-left: 20px;
     font-size: 35px;
     color: rgb(78, 41, 20);
     text-shadow: 2px 2px 2px rgb(255, 203, 173);;
@@ -12,7 +11,6 @@ export const PhonebookForm = styled.form`
 
     width: 500px;
     padding: 20px;
-    margin-left: 20px;
     border: 1px solid black;
     border-radius: 5px;
     background-color: rgb(255, 203, 173);
