@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {
+  ContactsBlock,
   ContactsTitle,
   ContactList,
   ContactItem,
@@ -7,7 +8,7 @@ import {
 } from './ContactList.styled';
 
 export const Contacts = ({ contactsFiltred, handleDelete }) => (
-  <div>
+  <ContactsBlock>
     <ContactsTitle>Contacts</ContactsTitle>
     <ContactList>
       {contactsFiltred.map((contact, id) => (
@@ -19,7 +20,7 @@ export const Contacts = ({ contactsFiltred, handleDelete }) => (
         </ContactItem>
       ))}
     </ContactList>
-  </div>
+  </ContactsBlock>
 );
 
 Contacts.propTypes = {

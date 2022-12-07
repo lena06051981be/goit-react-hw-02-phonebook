@@ -1,5 +1,11 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.section`
-    margin-left: 20px;
+export const Container = styled.div`
+    /* margin: 0 auto; */
+    /* width: 600px; */
+    margin: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
