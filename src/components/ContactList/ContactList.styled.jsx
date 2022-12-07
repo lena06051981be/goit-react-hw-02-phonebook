@@ -39,8 +39,8 @@ export const ContactBtn = styled.button`
     margin-left: 30px;
     width: 100px;
     padding: 5px 10px;
-    /* background-color: rgb(28, 80, 165); */
-    background-color: rgb(20, 89, 116);
+    background-color: rgb(28, 80, 165);
+    /* background-color: rgb(20, 89, 116); */
     color: white;
     border: none;
     border-radius: 15px;
