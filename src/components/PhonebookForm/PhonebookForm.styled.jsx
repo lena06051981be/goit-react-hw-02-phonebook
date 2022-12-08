@@ -5,12 +5,14 @@ export const FormTitle = styled.h1`
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 `
 export const PhonebookForm = styled.form`
+    list-style: inside;
     display: flex;
     flex-direction: column;
-
-    width: 500px;
+    min-width: 340px;
+    /* width: 355px; */
     padding: 20px;
     border: 1px solid black;
+    border: 0.3px solid darkcyan;
     border-radius: 5px;
     background-color: rgb(100, 237, 207);
     color: darkblue;
@@ -38,8 +40,8 @@ export const FormBtn = styled.button`
     width: 125px;
     padding: 10px 15px;
     margin-top: 20px;
-    /* background-color: rgb(20, 89, 116); */
-    background-color: rgb(28, 80, 165);
+    background-color: rgb(20, 89, 116);
+    /* background-color: rgb(28, 80, 165); */
     color: white;
     border: none;
     border-radius: 15px;
@@ -48,7 +50,7 @@ export const FormBtn = styled.button`
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:hover {
-        background-color: rgb(253, 232, 212);
+        background-color: #fafafa;
         color: darkblue;
         box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.4);
         }

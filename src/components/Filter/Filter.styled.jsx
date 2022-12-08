@@ -9,17 +9,17 @@ export const FilterTitle = styled.h2`
 `
 export const Filterinput = styled.input`
     width: 275px;
+    height: 22px;
     margin-bottom: 10px;
     padding: 4px;
     border: 0.3px solid rgb(78, 41, 20);
     border: 0.3px solid darkcyan;
     border: 0.3px solid rgb(20, 66, 78);
-    border-radius: 3px;
-    background-color: rgb(255, 244, 234);
+    border-radius: 10px;
+    background-color: rgba(228, 253, 252, 0.952);
     font-size: 18px;
     transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
         &:focus, :hover {
         box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.4);
-}
-    
+}    
 `
