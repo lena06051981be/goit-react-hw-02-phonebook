@@ -7,16 +7,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(160, 217, 250);
+  background-image: url(../src/img/fon-37.jpg);
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  background-size: auto;
+  background-position: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-body {
-  font-family: sans-serif;
-  line-height: 1.5;
 }
 
 h1,
@@ -28,28 +29,20 @@ h6,
 p {
   margin: 0;
 }
-
 ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
-
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-li {
-  list-style: none;
+input {
+  outline: none; 
 }
-
-.followers * {
-  fill: rgb(0, 204, 255);
-}
-.view * {
-  fill: rgb(0, 255, 0);
-}
-.like * {
-  fill: rgb(255, 56, 56);
+button {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
 }

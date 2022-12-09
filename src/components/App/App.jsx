@@ -1,37 +1,93 @@
-import PropTypes from "prop-types";
-import { Profile } from "../Profile/Profile";
-import { Statistics } from "components/Statistics/Statistics";
-import { FreindList } from "components/FriendList/FriendList";
-import { TransactionHistory } from "components/Transaction/TransactionHistory";
+import { Contacts } from 'components/ContactList/ContactList';
+import Filter from 'components/Filter/Filter';
+import PhonebookForm from 'components/PhonebookForm/PhonebookForm';
+import React, { Component } from 'react'
+import { Container } from './App.styled';
 
-import user from '../../data/user.json';
-import data from '../../data/data.json';
-import friend from '../../data/friends.json';
-import transactions from '../../data/transactions.json';
+class App extends Component {
+  state = {
+    contacts: [
+      {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
+      {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
+      {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
+      {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
+    ],
+    filter: '',
+  }
 
-import { Container, } from './App.styled'
+  formSubmitHandler = event => {
+    const newContact = {
+      id: event.id,
+      name: event.name,
+      number: event.number,
+    };
+    // const id = event.id;
+    // const name = event.name;
+    // const number = event.number;
+    const contactsLists = [...this.state.contacts];
+    console.log(event);
 
-export const App = () => {
-  return (
-    <Container>
-      <Profile 
-      username ={user.username}
-      tag = {user.tag}
-      location = {user.location}
-      avatar = {user.avatar}
-      followers={user.stats.followers}
-      views={user.stats.views}
-      likes={user.stats.likes}
-      />
-      <Statistics title="Upload stats" stats={data} />
-      <FreindList friends={friend} />
-      <TransactionHistory transaction={transactions} />
-    </Container>
-  );
-};
+    if (
+      contactsLists.find(
+        contacts => newContact.name.toLowerCase() === contacts.name.toLowerCase()
+      )) {
+      alert(`${newContact.name} is already in contacts.`);
+      return;
+    }    
+   
+    this.setState(({ contacts }) => ({
+      contacts: [newContact, ...contacts],
+    }));    
 
+    // this.setState({contacts: [newContact, contactsLists]})
+    // contactsLists.push({ name, id, number });   
 
+    // this.setState({contacts: contactsLists})
+  }
 
-// App.propTypes = {
-//   children: PropTypes.node,
-// };
+  
+  handleDelete = selectedId => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== selectedId),
+    }));
+  };
+
+  changeFilter = event => {
+    this.setState({ filter: event.currentTarget.value });
+  };  
+
+  // getFilteredContacts = () => {
+  //   const normalizedFilter = this.state.filter.toLowerCase();
+  //   const filterContactsList = this.state.contacts.filter(contact => {
+  //     return contact.name.toLowerCase().includes(normalizedFilter);
+  //   });
+  //   return filterContactsList;
+  // };
+  
+  getVisibleContacts = () => {
+    const normalizedFilter = this.state.filter.toLowerCase();   
+
+    return this.state.contacts.filter(contact =>
+      contact.name.toLowerCase().includes(normalizedFilter),
+    );
+  }
+
+  render() {
+    console.log(this.state.contacts);
+    
+    return (
+      <Container>
+        <PhonebookForm onSubmit={this.formSubmitHandler} />
+        <Filter
+          value={this.state.filter}
+          onFilter={this.changeFilter} />
+        <Contacts
+          contactsFiltred={this.getVisibleContacts()}
+          handleDelete={this.handleDelete}
+        ></Contacts>
+      </Container>
+  )
+}
+}
+
+export default App
